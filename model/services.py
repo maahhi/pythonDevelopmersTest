@@ -1,4 +1,6 @@
 from random import randint
+
+
 def weather():
     weathers = ["صاف و آفتابی",
                 "نیمه ابری",
@@ -26,7 +28,7 @@ def hafez():
                "منم که گوشه میخانه خانقاه من است"]
     return hafezs[randint(0, 2)]
 
-
+# a dictionary : keys = services name, values = correspondent function
 SERVICES={
     'آب و هوا':weather,
     'اوقات شرعی':time,

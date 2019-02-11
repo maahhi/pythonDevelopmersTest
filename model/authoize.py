@@ -21,7 +21,9 @@ def login(userpass):
     # username may not exist or password may not match
     return None
 
+# check the token if valid
 def logout(token):
+    # if token in list of tokens remove it, else there is problem in logout process
     if tokencheck(token) :
         if tokenremove(token) :
             return True
@@ -42,6 +44,7 @@ def tokencheck(token):
     else:
         return False
 
+# remove token from token list, it will be called only in logout func and tokencheck called before it
 def tokenremove(token):
     TOKEN.remove(token)
     return True
