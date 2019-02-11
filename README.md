@@ -1,4 +1,6 @@
 pythonDevelopmersTest
+read doc.pdf for more documentation.
+read process-Document.txt for more information about time spent on project.
 example of json for each url:
 /login
 {
