@@ -23,13 +23,14 @@ def login ( userpass ) :
     return response
 
 
-# login api get token and return success of fail
+# logout api get token and return success of fail
 def logout(tokenjson):
     # response body created but not field
     response = {
         'status':''
     }
     token = tokenjson['token']
+    # if there is not problem in logout it will be success
     status = authorize.logout(token)
     if status is False:
         response['status'] = 'failed'
@@ -38,6 +39,7 @@ def logout(tokenjson):
     return response
 
 
+# check the token and query , fail if token is invalid or the request is not in saved query
 def query(query):
     response = {
         'status':'',
@@ -46,11 +48,18 @@ def query(query):
     token = query["token"]
     request = query["request"]
 
+    # the user token is not valid
     if authorize.tokencheck(token) is False:
         response['status']='failed'
     else:
+        # the request is in services list
         if request in services.SERVICES.keys() :
+            # correspondent function for this service will call
             response['response'] = services.SERVICES[request]()
             response['status'] = 'success'
+        else:
+            # the request is not in services list
+            response['response'] = ".متاسفانه قادر به تشخیص درخواست شما نیستم"
+            response['status'] = 'failed'
 
     return response
