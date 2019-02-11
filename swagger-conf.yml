@@ -67,3 +67,33 @@ paths:
             properties:
               status:
                 type: string
+  /query:
+    post:
+      operationId: controller.query
+      tags:
+        - query
+      summary: any query after login
+      description: in case of wrong token failed status no response, in case of unkown query failed status, else success status and asnwer in response
+      parameters:
+        - name: query
+          in: body
+          description: query
+          required: True
+          schema:
+            type: object
+            properties:
+              token:
+                type: string
+                description: token
+              request:
+                type: string
+                description: token
+      responses:
+        200:
+          description: logout process completed, check status field for sucess or failed
+          schema:
+            properties:
+              status:
+                type: string
+              response:
+                type: string
