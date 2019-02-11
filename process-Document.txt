@@ -1,3 +1,13 @@
-15:43 (2/10/2019) - 16:28               reading document. searching about APIs , confident RESTful api
-22:05             - 23:15               reading this tutorial https://realpython.com/flask-connexion-rest-api/
-23:50             - 01:33 (2/11/2019)   previos tutorial was ended and testing api with postman
+15:43 (2/10/2019) - 16:28               reading document. searching about APIs , confident RESTful api (45 min)
+22:05             - 23:15               reading this tutorial https://realpython.com/flask-connexion-rest-api/ (70 min)
+23:50             - 01:33 (2/11/2019)   previos tutorial was ended and testing api with postman (103 min)
+01:33             - 2:15                searching about python principles and oop (42 min)
+------------------------------------------------------------------------------------------------------------ preimplementation : 4h and 20min
+11:38             - 11:56		starting implementation (18 min)
+12:13             - 14:10		main architecture designed and login logout finished (117 min)
+14:30             - 15:33               implementing services (63 min)
+------------------------------------------------------------------------------------------------------------ implementation    : 3h and 18min
+22:00             -23:00                documentation and code cleaning
+------------------------------------------------------------------------------------------------------------ documentation     : 1h
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------ sum               : 8h and 38min
