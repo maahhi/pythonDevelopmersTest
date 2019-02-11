@@ -36,7 +36,7 @@ PEOPLE = {
 
 def read_all():
     """
-    This function responds to a request for /api/people
+    This function responds to a request for /authoize.py/people
     with the complete lists of people
     :return:        json string of list of people
     """
@@ -46,7 +46,7 @@ def read_all():
 
 def read_one(lname):
     """
-    This function responds to a request for /api/people/{lname}
+    This function responds to a request for /authoize.py/people/{lname}
     with one matching person from people
     :param lname:   last name of person to find
     :return:        person matching last name

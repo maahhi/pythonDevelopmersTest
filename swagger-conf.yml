@@ -1,0 +1,69 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  version: "1.0.0"
+  title: Swagger ReST Article
+consumes:
+  - application/json
+produces:
+  - application/json
+
+basePath: /
+
+# Paths supported by the server application
+paths:
+  /login:
+    post:
+      operationId: controller.login
+      tags:
+        - login
+      summary: user login with username and password
+      description: login with username and password and a token will returned for keep user login
+      parameters:
+        - name: userpass
+          in: body
+          description: username and password
+          required: True
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+                description: username
+              password:
+                type: string
+                description: password
+      responses:
+        200:
+          description: login process completed, check status field for sucess (with token) or failed
+          schema:
+            properties:
+              status:
+                type: string
+              token:
+                type: string
+  /logout:
+    post:
+      operationId: controller.logout
+      tags:
+        - logout
+      summary: user login with valid token
+      description: login with valid token and response will be success of failed
+      parameters:
+        - name: tokenjson
+          in: body
+          description: token
+          required: True
+          schema:
+            type: object
+            properties:
+              token:
+                type: string
+                description: token
+      responses:
+        200:
+          description: logout process completed, check status field for sucess or failed
+          schema:
+            properties:
+              status:
+                type: string
